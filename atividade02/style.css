@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img#logo-img {
+    width: 150px;
+    height: auto;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-image: linear-gradient(to right, #e9e7d8 30%, #fda600);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: font-size 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    font-size: 150%;
+}
+
+#header-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    padding-bottom: 10px;
+}
+
+#header-main h2 {
+    font-size: 100px;
+    margin-bottom: 70px;
+}
+
+#proximos-eventos {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    border: 50px solid #ccc;
+}
+
+#proximos-eventos h3 {
+    display: flex;
+    justify-content: center;
+    color: orange;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#proximos-eventos p {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+main {
+    flex: 1;
+}
+
+.evento img {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.evento img:hover {
+    transform: scale(1.05);
+}
+
+.evento h4 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.evento {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 3px solid orange;
+    border-radius: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 3px solid orange;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+form::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(orange, orange), linear-gradient(#f0f0f0, #f0f0f0), linear-gradient(orange, orange), linear-gradient(#f0f0f0, #f0f0f0);
+    animation: rotate 4s linear infinite;
+}
+
+form::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 4px;
+    top: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: white;
+    border-radius: 7px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+form input {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form input:hover {
+    background-color: #f0f0f0;
+}
+
+form input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 5px rgba(253, 166, 0, 1);
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+form button:hover {
+    background-color: #e59400;
+}
+
+label {
+    display: flex;
+}
+
+label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fda600;
+    color: #fff;
+}
