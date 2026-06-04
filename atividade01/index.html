@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <label for="name">Nome</label>
+        <br>
+        <input type="text" id="name">
+        <br>
+        <label for="password">Senha deve ter pelo menos 8 caracteres</label>
+        <br>
+        <input type="password" id="password"> <button type="button" onclick="mostrar_ocultar()">Mostrar/Ocultar</button>
+        <br><br>
+        <input type="checkbox" onclick="aparecer()"> Sou estudante
+        <br><br>
+        <div id="escondido" style="display: none; border: 1px solid black; padding: 10px;">
+            <label for="curso">Curso</label>
+            <input type="text" id="curso">
+            <br><br>
+            <label for="instituicao">Instituição</label>
+            <input type="text" id="instituicao">
+            <br><br>
+            <label for="comeco">Período</label>
+            <input type="date" id="comeco">
+            <label for="fim">a</label>
+            <input type="date" id="fim">
+        </div>
+        <br><br>
+        <button type="button" onclick="validar()">Cadastrar</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
